@@ -29,5 +29,7 @@ dependencies {
 }
 
 processResources {
-    expand project.properties
+    filesMatching("**/plugin.xml") {
+        expand project.properties
+    }
 }
